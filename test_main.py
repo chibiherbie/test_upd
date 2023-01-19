@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 
 from some import privet
 
-VERSION = 1
+VERSION = 2
 
 
 # Подкласс QMainWindow для настройки главного окна приложения
@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My App")
 
-        button = QPushButton("Press Me!")
+        button = QPushButton("Press Me! UPDATE BTN")
 
         self.setFixedSize(QSize(400, 300))
 
@@ -42,9 +42,9 @@ class MainWindow(QMainWindow):
                     else:
                         os.remove(file)
 
-                exename = f'NameOfYourApp{float(check.text)}.exe'
+                exename = 'test_upd.rar'
                 code = requests.get(
-                    "https://raw.githubusercontent.com/SomeUser/SomeRepo/main/SomeFolder/NewUpdate.exe",
+                    "https://github.com/chibiherbie/test_upd/releases/download/test_tag/test_upd.rar",
                     allow_redirects=True)
                 open(exename, 'wb').write(code.content)
 
