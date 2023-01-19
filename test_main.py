@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
 
     def upd(self):
         try:
-            link = "https://raw.githubusercontent.com/SomeUser/SomeRepo/main/SomeFolder/version.txt"
+            link = "https://raw.githubusercontent.com/chibiherbie/test_upd/main/VERSION.txt"
             check = requests.get(link)
 
             if float(VERSION) < float(check.text):
